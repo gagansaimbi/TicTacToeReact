@@ -129,8 +129,6 @@ function Home() {
         setVal33('');
     }
 
-
-
     const handlePlayerInput = (id) => {
         if(!win){
         switch (id) {
@@ -237,7 +235,6 @@ function Home() {
     }
     };
 
-
     return (<>
         <br />
 
@@ -250,7 +247,9 @@ function Home() {
         <br />
         {/* <p>Click on 'Start the Game' button below to start</p> */}
         <span className="turn">
-            { !win &&
+            { !win && !(val11 !== '' && val12 !== '' && val13 !== '' &&
+                    val21 !== '' && val22 !== '' && val23 !== '' &&
+                    val31 !== '' && val32 !== '' && val33 !== '') &&
                 <span><span className={`turn-span ${turn===0 ? 'text-success-emphasis fs-1':'text-body-tertiary fs-3'}`}>Player-1 Go!</span>
             <span className={`turn-span`}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <span className={`turn-span ${turn===1 ? 'text-success-emphasis fs-1':'text-body-tertiary fs-3'}`}>Player-2 Go!</span>
@@ -259,6 +258,10 @@ function Home() {
             { win &&
                 <span className={`turn-span text-success-emphasis fs-1`}>Player {winner} wins!</span>
             }
+            {val11 !== '' && val12 !== '' && val13 !== '' &&
+                    val21 !== '' && val22 !== '' && val23 !== '' &&
+                    val31 !== '' && val32 !== '' && val33 !== '' && 
+                    <span className={`turn-span text-success-emphasis fs-1`}>Its a Tie!</span> }
         </span>
         
         {/* game grid  */}
