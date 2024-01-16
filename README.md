@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Interactive Tic Tac Toe game - React App
 
 This Tic tac toe game project was created using React and Bootstrap.
 
